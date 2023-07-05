@@ -1,0 +1,81 @@
+<div class="form-container">
+    <h2 class="container-header"> Create new User </h2>
+
+    <form [formGroup]="form"
+          class="form">
+        <div class="input-field-container">
+            <div>
+                <mat-form-field class="department-container"
+                                color="accent">
+                    <mat-label>Departments</mat-label>
+                    <input matInput
+                           formControlName="department"
+                           type="text"
+                           [matAutocomplete]="auto"
+                           placeholder="Start to type"
+                           area-label="Department name"
+                           required />
+                    <mat-autocomplete #auto="matAutocomplete"
+                                      [displayWith]="displayFn">
+                        <mat-option *ngFor="let dep of filteredDepartments | async"
+                                    [value]="dep">
+                            {{ dep.name }}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-error>Missing the department name</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field class="username-container"
+                                color="accent">
+                    <mat-label>Users</mat-label>
+                    <input matInput
+                           id="name"
+                           type="text"
+                           formControlName="name"
+                           placeholder="pl: Török Zsolt"
+                           required />
+                    <mat-error>Username is missing</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field class="user-birthday-container"
+                                color="accent">
+                    <mat-label>Birthday</mat-label>
+                    <input matInput
+                           [matDatepicker]="birthdatePicker"
+                           formControlName="birthday"
+                           [min]="earliestBirthDate"
+                           [max]="latestBirthDate"
+                           placeholder="e.g. 1954-12-07"
+                           required />
+                    <mat-hint align="end">Choose here
+                        <mat-icon>arrow_upward</mat-icon>
+                    </mat-hint>
+                    <mat-datepicker-toggle matIconSuffix
+                                           [for]="birthdatePicker">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #birthdatePicker
+                                    startView="multi-year">
+                    </mat-datepicker>
+                    <mat-error>Wrong format or missing date</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="action-container">
+            <button mat-raised-button
+                    (click)="saveNewUser()"
+                    type="button"
+                    class="create-button"
+                    color="primary"
+                    [disabled]="this.form.invalid"> Save </button>
+            <button mat-stroked-button
+                    (click)="resetFormValue()"
+                    class="cancel-button mat-elevation-z1"
+                    color="accent"> Cancel </button>
+        </div>
+
+    </form>
+</div>
