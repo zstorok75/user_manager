@@ -13,6 +13,7 @@ public class UserDto {
 
     /*************************************************** CONSTRUCTOR ***************************************************/
 
+    public UserDto() {}
     public UserDto(UserEntity user) {
         this.id = user.getId();
         this.name = user.getName();

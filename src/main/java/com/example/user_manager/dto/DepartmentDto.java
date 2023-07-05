@@ -8,6 +8,7 @@ public class DepartmentDto {
 
     private String name;
 
+    public DepartmentDto() {}
 
     public DepartmentDto(DepartmentEntity department) {
         this.id = department.getId();

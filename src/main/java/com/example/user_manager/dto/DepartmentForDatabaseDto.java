@@ -7,6 +7,8 @@ public class DepartmentForDatabaseDto {
     private String name;
     private List<NewUserDto> users;
 
+    public DepartmentForDatabaseDto() {}
+
     public DepartmentForDatabaseDto(String name, List<NewUserDto> users) {
         this.name = name;
         this.users = users;

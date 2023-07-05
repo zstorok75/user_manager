@@ -5,6 +5,8 @@ public class NewDepartmentDto {
     private Long id;
     private String name;
 
+    public NewDepartmentDto() {}
+
     public NewDepartmentDto(Long id, String name) {
         this.id = id;
         this.name = name;

@@ -6,6 +6,8 @@ public class FillUpDatabaseDto {
 
     public List<DepartmentForDatabaseDto> departments;
 
+    public FillUpDatabaseDto() {}
+
     public FillUpDatabaseDto(List<DepartmentForDatabaseDto> departments) {
         this.departments = departments;
     }

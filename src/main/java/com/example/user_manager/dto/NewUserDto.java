@@ -9,6 +9,7 @@ public class NewUserDto {
     private LocalDate birthday;
 
     /*************************************************** CONSTRUCTOR ***************************************************/
+    public NewUserDto() {}
 
     public NewUserDto(String name, LocalDate birthday, NewDepartmentDto department) {
         this.name = name;
