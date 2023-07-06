@@ -5,11 +5,9 @@ public class NewUserDto {
 
     private String name;
     private NewDepartmentDto department;
-
     private LocalDate birthday;
 
     /*************************************************** CONSTRUCTOR ***************************************************/
-    public NewUserDto() {}
 
     public NewUserDto(String name, LocalDate birthday, NewDepartmentDto department) {
         this.name = name;
@@ -23,6 +21,14 @@ public class NewUserDto {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
     public void setDepartment(NewDepartmentDto department) {
         this.department = department;
     }
@@ -31,7 +37,4 @@ public class NewUserDto {
         return department;
     }
 
-    public LocalDate getBirthday() {
-        return birthday;
-    }
 }

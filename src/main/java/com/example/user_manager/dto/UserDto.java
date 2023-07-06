@@ -14,12 +14,13 @@ public class UserDto {
     /*************************************************** CONSTRUCTOR ***************************************************/
 
     public UserDto() {}
+
     public UserDto(UserEntity user) {
         this.id = user.getId();
         this.name = user.getName();
         this.department = new DepartmentDto(user.getDepartment());
         this.birthday = user.getBirthday();
-    };
+    }
 
     /***************************************************** GETTER *****************************************************/
 
@@ -27,13 +28,27 @@ public class UserDto {
         return this.id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public DepartmentDto getDepartment() {
         return this.department;
     }
 
+    public void setDepartment(DepartmentDto department) {
+        this.department = department;
+    }
 
     public String getName() {
         return this.name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
 }

@@ -33,7 +33,7 @@ public class UserEntity {
         this.birthday = newUserDto.getBirthday();
     }
 
-    /***************************************************** GETTER *****************************************************/
+    /************************************************** GETTER SETTER **************************************************/
 
     public Long getId() {
         return this.id;
@@ -43,8 +43,8 @@ public class UserEntity {
         this.id = id;
     }
 
-    public void setBirthday(LocalDate birthday) {
-        this.birthday = birthday;
+    public LocalDate getBirthday() {
+        return this.birthday;
     }
 
     public String getName() {
@@ -61,10 +61,6 @@ public class UserEntity {
 
     public void setDepartment(DepartmentEntity department) {
         this.department = department;
-    }
-
-    public LocalDate getBirthday() {
-        return this.birthday;
     }
 
 }
