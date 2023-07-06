@@ -10,7 +10,7 @@ In order to start the back-end application you need to install the Oracle Java.
 
 Starting the application:
 When the installation of th Java is successfuly done, you can start the app.
-On Windows OS for starting the app run the start.bat file
+On Windows OS for starting the app run the "start.bat" file
 which you find in the main directory of the app.
 
 Testing the application:
