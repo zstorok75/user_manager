@@ -16,12 +16,6 @@ which you find in the main directory of the app.
 Testing the application:
 You have to install a program which capale of sending HTTP requests. (e.g. Postman, download: https://www.postman.com/)
 
-For filling up the database with the JSON text included in the task description file (Webfejlesztés_Teszt_HU.docx), send a 'POST request' to the following endpoint.
-http://localhost:8080/api/department/create
-
-You can also test how the application returns the data, send a 'GET request' to the next url:
-http://localhost:8080/api/department/findAll
-
 
 Angular Frontend application:
 
